@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B93001D29F86C8500D4D9B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93001C29F86C8500D4D9B9 /* AppDelegate.swift */; };
-		0B93001F29F86C8500D4D9B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93001E29F86C8500D4D9B9 /* SceneDelegate.swift */; };
-		0B93002129F86C8500D4D9B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93002029F86C8500D4D9B9 /* ViewController.swift */; };
-		0B93002429F86C8500D4D9B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B93002229F86C8500D4D9B9 /* Main.storyboard */; };
-		0B93002629F86C8700D4D9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B93002529F86C8700D4D9B9 /* Assets.xcassets */; };
-		0B93002929F86C8700D4D9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B93002729F86C8700D4D9B9 /* LaunchScreen.storyboard */; };
+		0B96FA7829F9B8E1005599A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96FA7729F9B8E1005599A9 /* AppDelegate.swift */; };
+		0B96FA7A29F9B8E1005599A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96FA7929F9B8E1005599A9 /* SceneDelegate.swift */; };
+		0B96FA7C29F9B8E1005599A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B96FA7B29F9B8E1005599A9 /* ViewController.swift */; };
+		0B96FA8129F9B8E3005599A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B96FA8029F9B8E3005599A9 /* Assets.xcassets */; };
+		0B96FA8429F9B8E3005599A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B96FA8229F9B8E3005599A9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B93001929F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8 - HW11 - Mikhailova Olga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B93001C29F86C8500D4D9B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B93001E29F86C8500D4D9B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B93002029F86C8500D4D9B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B93002329F86C8500D4D9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B93002529F86C8700D4D9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0B93002829F86C8700D4D9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0B93002A29F86C8700D4D9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B96FA7429F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS8 - HW11 - Mikhailova Olga.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B96FA7729F9B8E1005599A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B96FA7929F9B8E1005599A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0B96FA7B29F9B8E1005599A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B96FA8029F9B8E3005599A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B96FA8329F9B8E3005599A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B96FA8529F9B8E3005599A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B93001629F86C8500D4D9B9 /* Frameworks */ = {
+		0B96FA7129F9B8E1005599A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,46 +35,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B93001029F86C8400D4D9B9 = {
+		0B96FA6B29F9B8E1005599A9 = {
 			isa = PBXGroup;
 			children = (
-				0B93001B29F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga */,
-				0B93001A29F86C8500D4D9B9 /* Products */,
+				0B96FA7629F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga */,
+				0B96FA7529F9B8E1005599A9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0B93001A29F86C8500D4D9B9 /* Products */ = {
+		0B96FA7529F9B8E1005599A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B93001929F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga.app */,
+				0B96FA7429F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B93001B29F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga */ = {
+		0B96FA7629F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga */ = {
 			isa = PBXGroup;
 			children = (
-				0B93001C29F86C8500D4D9B9 /* AppDelegate.swift */,
-				0B93001E29F86C8500D4D9B9 /* SceneDelegate.swift */,
-				0B93002029F86C8500D4D9B9 /* ViewController.swift */,
-				0B93002229F86C8500D4D9B9 /* Main.storyboard */,
-				0B93002529F86C8700D4D9B9 /* Assets.xcassets */,
-				0B93002729F86C8700D4D9B9 /* LaunchScreen.storyboard */,
-				0B93002A29F86C8700D4D9B9 /* Info.plist */,
+				0B96FA8C29F9B914005599A9 /* Resourses */,
+				0B96FA8B29F9B90D005599A9 /* Sourses */,
 			);
 			path = "iOS8 - HW11 - Mikhailova Olga";
+			sourceTree = "<group>";
+		};
+		0B96FA8B29F9B90D005599A9 /* Sourses */ = {
+			isa = PBXGroup;
+			children = (
+				0B96FA8E29F9B933005599A9 /* apps */,
+				0B96FA7B29F9B8E1005599A9 /* ViewController.swift */,
+			);
+			path = Sourses;
+			sourceTree = "<group>";
+		};
+		0B96FA8C29F9B914005599A9 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				0B96FA8029F9B8E3005599A9 /* Assets.xcassets */,
+				0B96FA8229F9B8E3005599A9 /* LaunchScreen.storyboard */,
+				0B96FA8529F9B8E3005599A9 /* Info.plist */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		0B96FA8E29F9B933005599A9 /* apps */ = {
+			isa = PBXGroup;
+			children = (
+				0B96FA7729F9B8E1005599A9 /* AppDelegate.swift */,
+				0B96FA7929F9B8E1005599A9 /* SceneDelegate.swift */,
+			);
+			path = apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B93001829F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga */ = {
+		0B96FA7329F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B93002D29F86C8700D4D9B9 /* Build configuration list for PBXNativeTarget "iOS8 - HW11 - Mikhailova Olga" */;
+			buildConfigurationList = 0B96FA8829F9B8E3005599A9 /* Build configuration list for PBXNativeTarget "iOS8 - HW11 - Mikhailova Olga" */;
 			buildPhases = (
-				0B93001529F86C8500D4D9B9 /* Sources */,
-				0B93001629F86C8500D4D9B9 /* Frameworks */,
-				0B93001729F86C8500D4D9B9 /* Resources */,
+				0B96FA7029F9B8E1005599A9 /* Sources */,
+				0B96FA7129F9B8E1005599A9 /* Frameworks */,
+				0B96FA7229F9B8E1005599A9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +105,25 @@
 			);
 			name = "iOS8 - HW11 - Mikhailova Olga";
 			productName = "iOS8 - HW11 - Mikhailova Olga";
-			productReference = 0B93001929F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga.app */;
+			productReference = 0B96FA7429F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0B93001129F86C8400D4D9B9 /* Project object */ = {
+		0B96FA6C29F9B8E1005599A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					0B93001829F86C8500D4D9B9 = {
+					0B96FA7329F9B8E1005599A9 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 0B93001429F86C8400D4D9B9 /* Build configuration list for PBXProject "iOS8 - HW11 - Mikhailova Olga" */;
+			buildConfigurationList = 0B96FA6F29F9B8E1005599A9 /* Build configuration list for PBXProject "iOS8 - HW11 - Mikhailova Olga" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +131,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 0B93001029F86C8400D4D9B9;
-			productRefGroup = 0B93001A29F86C8500D4D9B9 /* Products */;
+			mainGroup = 0B96FA6B29F9B8E1005599A9;
+			productRefGroup = 0B96FA7529F9B8E1005599A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B93001829F86C8500D4D9B9 /* iOS8 - HW11 - Mikhailova Olga */,
+				0B96FA7329F9B8E1005599A9 /* iOS8 - HW11 - Mikhailova Olga */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0B93001729F86C8500D4D9B9 /* Resources */ = {
+		0B96FA7229F9B8E1005599A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B93002929F86C8700D4D9B9 /* LaunchScreen.storyboard in Resources */,
-				0B93002629F86C8700D4D9B9 /* Assets.xcassets in Resources */,
-				0B93002429F86C8500D4D9B9 /* Main.storyboard in Resources */,
+				0B96FA8429F9B8E3005599A9 /* LaunchScreen.storyboard in Resources */,
+				0B96FA8129F9B8E3005599A9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B93001529F86C8500D4D9B9 /* Sources */ = {
+		0B96FA7029F9B8E1005599A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B93002129F86C8500D4D9B9 /* ViewController.swift in Sources */,
-				0B93001D29F86C8500D4D9B9 /* AppDelegate.swift in Sources */,
-				0B93001F29F86C8500D4D9B9 /* SceneDelegate.swift in Sources */,
+				0B96FA7C29F9B8E1005599A9 /* ViewController.swift in Sources */,
+				0B96FA7829F9B8E1005599A9 /* AppDelegate.swift in Sources */,
+				0B96FA7A29F9B8E1005599A9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0B93002229F86C8500D4D9B9 /* Main.storyboard */ = {
+		0B96FA8229F9B8E3005599A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0B93002329F86C8500D4D9B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0B93002729F86C8700D4D9B9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0B93002829F86C8700D4D9B9 /* Base */,
+				0B96FA8329F9B8E3005599A9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +178,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0B93002B29F86C8700D4D9B9 /* Debug */ = {
+		0B96FA8629F9B8E3005599A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		0B93002C29F86C8700D4D9B9 /* Release */ = {
+		0B96FA8729F9B8E3005599A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +292,7 @@
 			};
 			name = Release;
 		};
-		0B93002E29F86C8700D4D9B9 /* Debug */ = {
+		0B96FA8929F9B8E3005599A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,10 +301,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58NQ7DA6UP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS8 - HW11 - Mikhailova Olga/Info.plist";
+				INFOPLIST_FILE = "iOS8 - HW11 - Mikhailova Olga/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -308,7 +319,7 @@
 			};
 			name = Debug;
 		};
-		0B93002F29F86C8700D4D9B9 /* Release */ = {
+		0B96FA8A29F9B8E3005599A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,10 +328,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58NQ7DA6UP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS8 - HW11 - Mikhailova Olga/Info.plist";
+				INFOPLIST_FILE = "iOS8 - HW11 - Mikhailova Olga/Resourses/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,25 +349,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B93001429F86C8400D4D9B9 /* Build configuration list for PBXProject "iOS8 - HW11 - Mikhailova Olga" */ = {
+		0B96FA6F29F9B8E1005599A9 /* Build configuration list for PBXProject "iOS8 - HW11 - Mikhailova Olga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B93002B29F86C8700D4D9B9 /* Debug */,
-				0B93002C29F86C8700D4D9B9 /* Release */,
+				0B96FA8629F9B8E3005599A9 /* Debug */,
+				0B96FA8729F9B8E3005599A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B93002D29F86C8700D4D9B9 /* Build configuration list for PBXNativeTarget "iOS8 - HW11 - Mikhailova Olga" */ = {
+		0B96FA8829F9B8E3005599A9 /* Build configuration list for PBXNativeTarget "iOS8 - HW11 - Mikhailova Olga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B93002E29F86C8700D4D9B9 /* Debug */,
-				0B93002F29F86C8700D4D9B9 /* Release */,
+				0B96FA8929F9B8E3005599A9 /* Debug */,
+				0B96FA8A29F9B8E3005599A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0B93001129F86C8400D4D9B9 /* Project object */;
+	rootObject = 0B96FA6C29F9B8E1005599A9 /* Project object */;
 }
