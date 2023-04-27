@@ -36,7 +36,20 @@ class ViewController: UIViewController {
         ofLoginLabel.translatesAutoresizingMaskIntoConstraints = false
         return ofLoginLabel
     }()
-   
+    
+    private lazy var loginTextField: UITextField = {
+        let loginTextField = UITextField()
+        loginTextField.layer.cornerRadius = 18
+        loginTextField.placeholder = "keanureeves01"
+        loginTextField.textAlignment = .center
+        loginTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        loginTextField.textColor = UIColor.systemGray3
+        loginTextField.setLeftIcon(image: UIImage(systemName: "person") ?? UIImage(), color: UIColor.gray)
+        loginTextField.setRightIcon(image: UIImage(systemName: "checkmark.circle.fill") ?? UIImage(), color: UIColor.green)
+        loginTextField.backgroundColor = .white
+        loginTextField.translatesAutoresizingMaskIntoConstraints = false
+        return loginTextField
+    }()
 
     //MARK: - Lifecycle
     
@@ -60,6 +73,8 @@ class ViewController: UIViewController {
     
     private func setupHierarchy() {
         view.addSubview(background)
+        view.addSubview(ofLoginLabel)
+        view.addSubview(loginTextField)
     }
     
     private func setupLayout() {
