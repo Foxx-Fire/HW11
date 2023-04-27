@@ -163,6 +163,15 @@ class ViewController: UIViewController {
         return twitterButton
     }()
     
+    private lazy var accountTextField: UITextField = {
+        let accountTextField = UITextField()
+        accountTextField.text = "Don't have account?"
+        accountTextField.textColor = UIColor.magenta
+        accountTextField.font = UIFont(name: "Avenir-Next", size: 14)
+        accountTextField.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        accountTextField.translatesAutoresizingMaskIntoConstraints = false
+        return accountTextField
+    }()
     
 
     //MARK: - Lifecycle
@@ -192,6 +201,7 @@ class ViewController: UIViewController {
         view.addSubview(connectTextField)
         view.addSubview(faceBookButton)
         view.addSubview(twitterButton)
+        view.addSubview(accountTextField)
     }
     
     private func setupLayout() {
