@@ -142,6 +142,26 @@ class ViewController: UIViewController {
         return faceBookButton
     }()
     
+    private lazy var twitterButton: UIButton = {
+        let twitterButton = UIButton()
+        twitterButton.backgroundColor = .systemBlue
+        twitterButton.layer.cornerRadius = 18
+        twitterButton.setTitle("Twitter", for: .normal)
+        twitterButton.setTitleColor(UIColor.white, for: .normal)
+        twitterButton.titleLabel?.font = UIFont(name: "Avenir-Next", size: 12)
+        twitterButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        twitterButton.setImage( UIImage(named: "twitter")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        twitterButton.tintColor = UIColor.white
+        twitterButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 100)
+        twitterButton.layer.shadowColor = UIColor.black.cgColor
+        twitterButton.layer.shadowOpacity = 0.3
+        twitterButton.layer.shadowOffset = .zero
+        twitterButton.layer.shadowRadius = 10
+        twitterButton.layer.shouldRasterize = true
+        twitterButton.layer.rasterizationScale = UIScreen.main.scale
+        twitterButton.translatesAutoresizingMaskIntoConstraints = false
+        return twitterButton
+    }()
     
     
 
@@ -171,12 +191,14 @@ class ViewController: UIViewController {
         view.addSubview(lineViewRight)
         view.addSubview(connectTextField)
         view.addSubview(faceBookButton)
-        
+        view.addSubview(twitterButton)
     }
     
     private func setupLayout() {
     }
 
+    //MARK: - Actions
+   
 }
 
-//MARK: - Actions
+
