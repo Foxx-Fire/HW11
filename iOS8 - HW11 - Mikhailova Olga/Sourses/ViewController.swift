@@ -109,6 +109,17 @@ class ViewController: UIViewController {
          return lineViewRight
      }()
     
+    private lazy var connectTextField: UITextField = {
+        let connectTextField = UITextField()
+        connectTextField.text = "or connect with"
+        connectTextField.textAlignment = .center
+        connectTextField.textColor = UIColor.white
+        connectTextField.font = UIFont(name: "Avenir-Next", size: 10)
+        connectTextField.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        connectTextField.translatesAutoresizingMaskIntoConstraints = false
+        return connectTextField
+    }()
+    
     
 
     //MARK: - Lifecycle
@@ -135,6 +146,7 @@ class ViewController: UIViewController {
         view.addSubview(remindTextField)
         view.addSubview(lineViewLeft)
         view.addSubview(lineViewRight)
+        view.addSubview(connectTextField)
         
     }
     
