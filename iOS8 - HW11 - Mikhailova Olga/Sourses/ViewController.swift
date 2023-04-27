@@ -21,6 +21,21 @@ class ViewController: UIViewController {
         background.translatesAutoresizingMaskIntoConstraints = false
         return background
     }()
+    
+    private lazy var ofLoginLabel: UILabel = {
+        let ofLoginLabel = UILabel()
+        ofLoginLabel.text = "Login"
+        ofLoginLabel.textAlignment = .center
+        ofLoginLabel.textColor = UIColor.systemIndigo
+        ofLoginLabel.font = UIFont(name: "Avenir-Next", size: 31)
+        
+        //а как избежать повторения 31 и 31?
+        
+        ofLoginLabel.font = UIFont.systemFont(ofSize: 31, weight: .bold)
+        ofLoginLabel.numberOfLines = 1
+        ofLoginLabel.translatesAutoresizingMaskIntoConstraints = false
+        return ofLoginLabel
+    }()
    
 
     //MARK: - Lifecycle
