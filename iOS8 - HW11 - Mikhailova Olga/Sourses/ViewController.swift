@@ -11,6 +11,16 @@ class ViewController: UIViewController {
     
     //MARK: - Outlets
     
+    private lazy var background: UIImageView = {
+        let background = UIImageView()
+        background.image = UIImage(named: "background")
+        
+        // так верно? я про расположение на экране
+        
+        background.contentMode = .scaleAspectFit
+        background.translatesAutoresizingMaskIntoConstraints = false
+        return background
+    }()
    
 
     //MARK: - Lifecycle
@@ -30,9 +40,11 @@ class ViewController: UIViewController {
     //MARK: - Setups
     
     private func setupView() {
+        view.backgroundColor = .black
     }
     
     private func setupHierarchy() {
+        view.addSubview(background)
     }
     
     private func setupLayout() {
