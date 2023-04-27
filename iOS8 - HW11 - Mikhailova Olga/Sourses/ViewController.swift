@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         setupHierarchy()
         setupLayout()
     }
+    
+    //MARK: - Setups
+    
+    //MARK: - Actions
+    
 
     //MARK: - Setups
     
