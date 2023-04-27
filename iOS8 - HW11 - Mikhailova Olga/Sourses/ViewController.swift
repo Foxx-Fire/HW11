@@ -223,6 +223,12 @@ class ViewController: UIViewController {
 
     //MARK: - Actions
    
+    @objc private func buttonTapped() {
+        if let url = URL(string: "https://www.youtube.com/watch?v=7AzimrAgWbA") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
+
 
 
