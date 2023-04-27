@@ -94,20 +94,20 @@ class ViewController: UIViewController {
     }()
     
     // тут две линии и у них выставлена длина в констрейнерах но - они на весь экран почему-то
-     
-     private lazy var lineViewLeft: UIView = {
-         let lineViewLeft = UIView()
-         lineViewLeft.backgroundColor = UIColor.systemGray5
-         lineViewLeft.translatesAutoresizingMaskIntoConstraints = false
-         return lineViewLeft
-     }()
-     
-     private lazy var lineViewRight: UIView = {
-         let lineViewRight = UIView()
-         lineViewRight.backgroundColor = UIColor.systemGray5
-         lineViewRight.translatesAutoresizingMaskIntoConstraints = false
-         return lineViewRight
-     }()
+    
+    private lazy var lineViewLeft: UIView = {
+        let lineViewLeft = UIView()
+        lineViewLeft.backgroundColor = UIColor.systemGray5
+        lineViewLeft.translatesAutoresizingMaskIntoConstraints = false
+        return lineViewLeft
+    }()
+    
+    private lazy var lineViewRight: UIView = {
+        let lineViewRight = UIView()
+        lineViewRight.backgroundColor = UIColor.systemGray5
+        lineViewRight.translatesAutoresizingMaskIntoConstraints = false
+        return lineViewRight
+    }()
     
     private lazy var connectTextField: UITextField = {
         let connectTextField = UITextField()
@@ -185,8 +185,7 @@ class ViewController: UIViewController {
         signUpTextView.translatesAutoresizingMaskIntoConstraints = false
         return signUpTextView
     }()
-    
-
+        
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -196,7 +195,7 @@ class ViewController: UIViewController {
         setupLayout()
     }
     
-   //MARK: - Setups
+    //MARK: - Setups
     
     private func setupView() {
         view.backgroundColor = .black
@@ -219,10 +218,72 @@ class ViewController: UIViewController {
     }
     
     private func setupLayout() {
+        NSLayoutConstraint.activate([
+            
+            ofLoginLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ofLoginLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250),
+            
+            loginTextField.topAnchor.constraint(equalTo: ofLoginLabel.bottomAnchor, constant: 20),
+            loginTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
+            
+            //loginTextField.widthAnchor.constraint(equalToConstant: 200) а лучше размеры задавать так или все же от края?
+            
+            loginTextField.heightAnchor.constraint(equalToConstant: 34),
+            
+            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 20),
+            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            passwordTextField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 34),
+            
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
+            loginButton.centerXAnchor.constraint(equalTo:view.centerXAnchor),
+            loginButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 45),
+            loginButton.heightAnchor.constraint(equalToConstant: 34),
+            
+            remindTextField.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 25),
+            remindTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            connectTextField.topAnchor.constraint(equalTo: remindTextField.bottomAnchor, constant: 155),
+            connectTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            connectTextField.heightAnchor.constraint(equalToConstant: 10),
+            connectTextField.widthAnchor.constraint(equalToConstant: 100),
+            
+            lineViewLeft.topAnchor.constraint(equalTo: remindTextField.bottomAnchor, constant: 160),
+            lineViewLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lineViewLeft.heightAnchor.constraint(equalToConstant: 1),
+            
+            // длина почему-то не регулируется и идет на полный экран. widthAnchor это де длина?
+            
+            lineViewLeft.widthAnchor.constraint(equalToConstant: 50),
+            lineViewLeft.leftAnchor.constraint(equalTo: view.leftAnchor, constant:  20),
+            
+            lineViewRight.topAnchor.constraint(equalTo: remindTextField.bottomAnchor, constant: 160),
+            lineViewRight.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            lineViewRight.heightAnchor.constraint(equalToConstant: 1),
+            lineViewRight.widthAnchor.constraint(equalToConstant: 50),
+            lineViewRight.rightAnchor.constraint(equalTo: view.rightAnchor, constant:  -20),
+            
+            faceBookButton.topAnchor.constraint(equalTo: connectTextField.bottomAnchor, constant: 30),
+            faceBookButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 35),
+            faceBookButton.heightAnchor.constraint(equalToConstant: 34),
+            faceBookButton.widthAnchor.constraint(equalToConstant: 150),
+            
+            twitterButton.topAnchor.constraint(equalTo: connectTextField.bottomAnchor, constant: 30),
+            twitterButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -35),
+            twitterButton.heightAnchor.constraint(equalToConstant: 34),
+            twitterButton.widthAnchor.constraint(equalToConstant: 150),
+            
+            accountTextField.topAnchor.constraint(equalTo: faceBookButton.bottomAnchor, constant: 35),
+            accountTextField.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 120),
+            
+            signUpTextView.topAnchor.constraint(equalTo: faceBookButton.bottomAnchor, constant: 35),
+            signUpTextView.rightAnchor.constraint(equalTo: accountTextField.rightAnchor, constant: 45)
+        ])
     }
-
+    
     //MARK: - Actions
-   
+    
     @objc private func buttonTapped() {
         if let url = URL(string: "https://www.youtube.com/watch?v=7AzimrAgWbA") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
