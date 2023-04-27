@@ -93,6 +93,22 @@ class ViewController: UIViewController {
         return remindTextField
     }()
     
+    // тут две линии и у них выставлена длина в констрейнерах но - они на весь экран почему-то
+     
+     private lazy var lineViewLeft: UIView = {
+         let lineViewLeft = UIView()
+         lineViewLeft.backgroundColor = UIColor.systemGray5
+         lineViewLeft.translatesAutoresizingMaskIntoConstraints = false
+         return lineViewLeft
+     }()
+     
+     private lazy var lineViewRight: UIView = {
+         let lineViewRight = UIView()
+         lineViewRight.backgroundColor = UIColor.systemGray5
+         lineViewRight.translatesAutoresizingMaskIntoConstraints = false
+         return lineViewRight
+     }()
+    
     
 
     //MARK: - Lifecycle
@@ -117,6 +133,8 @@ class ViewController: UIViewController {
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
         view.addSubview(remindTextField)
+        view.addSubview(lineViewLeft)
+        view.addSubview(lineViewRight)
         
     }
     
