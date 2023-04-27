@@ -82,6 +82,18 @@ class ViewController: UIViewController {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         return loginButton
     }()
+    
+    private lazy var remindTextField: UITextField = {
+        let remindTextField = UITextField()
+        remindTextField.text = "Forgot your password?"
+        remindTextField.textColor = UIColor.systemBlue
+        remindTextField.font = UIFont(name: "Avenir-Next", size: 10)
+        remindTextField.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        remindTextField.translatesAutoresizingMaskIntoConstraints = false
+        return remindTextField
+    }()
+    
+    
 
     //MARK: - Lifecycle
     
@@ -104,6 +116,7 @@ class ViewController: UIViewController {
         view.addSubview(loginTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
+        view.addSubview(remindTextField)
         
     }
     
