@@ -120,6 +120,29 @@ class ViewController: UIViewController {
         return connectTextField
     }()
     
+    private lazy var faceBookButton: UIButton = {
+        let faceBookButton = UIButton()
+        faceBookButton.backgroundColor = .systemIndigo
+        faceBookButton.layer.cornerRadius = 18
+        faceBookButton.setTitle("Facebook", for: .normal)
+        faceBookButton.setTitleColor(UIColor.white, for: .normal)
+        faceBookButton.titleLabel?.font = UIFont(name: "Avenir-Next", size: 12)
+        faceBookButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        faceBookButton.setImage(UIImage(named: "facebook")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        faceBookButton.tintColor = UIColor.white
+        faceBookButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 100)
+        //faceBookButton.addMediaIcon(image: UIImage(named: "facebook"), color: .white, place: faceBookButton.imageEdgeInsets) а почему так не работает?
+        faceBookButton.layer.shadowColor = UIColor.black.cgColor
+        faceBookButton.layer.shadowOpacity = 0.3
+        faceBookButton.layer.shadowOffset = .zero
+        faceBookButton.layer.shadowRadius = 10
+        faceBookButton.layer.shouldRasterize = true
+        faceBookButton.layer.rasterizationScale = UIScreen.main.scale
+        faceBookButton.translatesAutoresizingMaskIntoConstraints = false
+        return faceBookButton
+    }()
+    
+    
     
 
     //MARK: - Lifecycle
@@ -147,6 +170,7 @@ class ViewController: UIViewController {
         view.addSubview(lineViewLeft)
         view.addSubview(lineViewRight)
         view.addSubview(connectTextField)
+        view.addSubview(faceBookButton)
         
     }
     
