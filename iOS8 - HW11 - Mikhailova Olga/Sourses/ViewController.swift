@@ -50,6 +50,19 @@ class ViewController: UIViewController {
         loginTextField.translatesAutoresizingMaskIntoConstraints = false
         return loginTextField
     }()
+    
+    private lazy var passwordTextField:  UITextField = {
+        let passwordTextField = UITextField()
+        passwordTextField.layer.cornerRadius = 18
+        passwordTextField.placeholder = "Password"
+        passwordTextField.textAlignment = .center
+        passwordTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
+        passwordTextField.textColor = UIColor.systemGray3
+        passwordTextField.setLeftIcon(image: UIImage(systemName: "lock") ?? UIImage(), color: UIColor.gray)
+        passwordTextField.backgroundColor = .white
+        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
+        return passwordTextField
+    }()
 
     //MARK: - Lifecycle
     
@@ -75,6 +88,7 @@ class ViewController: UIViewController {
         view.addSubview(background)
         view.addSubview(ofLoginLabel)
         view.addSubview(loginTextField)
+        view.addSubview(passwordTextField)
     }
     
     private func setupLayout() {
