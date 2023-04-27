@@ -8,12 +8,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: - Outlets
+    
+   
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
     }
 
+    //MARK: - Setups
+    
+    private func setupView() {
+    }
+    
+    private func setupHierarchy() {
+    }
+    
+    private func setupLayout() {
+    }
 
 }
 
+//MARK: - Actions
