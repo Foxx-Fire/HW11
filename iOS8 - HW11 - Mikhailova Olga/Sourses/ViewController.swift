@@ -173,6 +173,19 @@ class ViewController: UIViewController {
         return accountTextField
     }()
     
+    private lazy var signUpTextView: UITextField = {
+        let signUpTextView = UITextField()
+        signUpTextView.text = "Sign up"
+        signUpTextView.font = UIFont(name: "Avenir-Next", size: 14)
+        signUpTextView.font = UIFont.systemFont(ofSize: 10, weight: .light)
+        
+        // не срабатывает расширение - в чем тут мой косяк?
+        
+        signUpTextView.attributedText(string: signUpTextView.text ?? "" )
+        signUpTextView.translatesAutoresizingMaskIntoConstraints = false
+        return signUpTextView
+    }()
+    
 
     //MARK: - Lifecycle
     
@@ -202,6 +215,7 @@ class ViewController: UIViewController {
         view.addSubview(faceBookButton)
         view.addSubview(twitterButton)
         view.addSubview(accountTextField)
+        view.addSubview(signUpTextView)
     }
     
     private func setupLayout() {
