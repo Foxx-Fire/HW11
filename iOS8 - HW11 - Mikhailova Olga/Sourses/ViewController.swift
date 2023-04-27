@@ -63,6 +63,25 @@ class ViewController: UIViewController {
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         return passwordTextField
     }()
+    
+    private lazy var loginButton: UIButton = {
+        let loginButton = UIButton(type: .system)
+        loginButton.backgroundColor = .systemIndigo
+        loginButton.layer.cornerRadius = 18
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        loginButton.titleLabel?.font = UIFont(name: "Avenir-Next", size: 12)
+        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOpacity = 0.3
+        loginButton.layer.shadowOffset = .zero
+        loginButton.layer.shadowRadius = 10
+        loginButton.layer.shouldRasterize = true
+        loginButton.layer.rasterizationScale = UIScreen.main.scale
+        loginButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
+        return loginButton
+    }()
 
     //MARK: - Lifecycle
     
@@ -73,12 +92,7 @@ class ViewController: UIViewController {
         setupLayout()
     }
     
-    //MARK: - Setups
-    
-    //MARK: - Actions
-    
-
-    //MARK: - Setups
+   //MARK: - Setups
     
     private func setupView() {
         view.backgroundColor = .black
@@ -89,6 +103,8 @@ class ViewController: UIViewController {
         view.addSubview(ofLoginLabel)
         view.addSubview(loginTextField)
         view.addSubview(passwordTextField)
+        view.addSubview(loginButton)
+        
     }
     
     private func setupLayout() {
