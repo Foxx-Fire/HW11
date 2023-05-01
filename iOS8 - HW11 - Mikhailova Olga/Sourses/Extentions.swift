@@ -47,11 +47,8 @@ extension UIButton {
 }
                             
 extension UITextField {
-    func attributedText(string: String) {
-                
-         let attributedArray: [NSAttributedString.Key : Any] = [
-            NSAttributedString.Key.foregroundColor: UIColor.green]
-                
-          let attributedString = NSAttributedString(string: string, attributes: attributedArray)
+    func setAttributedText(string: String, color: UIColor) {
+        let attributedString = NSAttributedString(string: string, attributes: [.foregroundColor: color])
+        self.attributedText = attributedString
     }
 }
