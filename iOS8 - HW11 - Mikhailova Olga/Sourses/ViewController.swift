@@ -3,7 +3,37 @@
 //  iOS8 - HW11 - Mikhailova Olga
 //
 //  Created by mbpro2.0/16/512 on 26.04.2023.
-//
+
+
+/*
+ файлик Extentions:
+ - расширение для кнопки нужно положить в отдельный файл.
+ - не нужно каждый раз писать extension UITextField, один раз напиши и потом прописывай все методы.
+ файлик VC:
+ - backgroundImageView можно задать размеры через фрейм, вот так background.frame.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height) и потом констрейнтами прибить ее к centerXAnchor и centerYAnchor. Или просто констрейнтами topAnchor, bottomAnchor, left и right.
+ Ты добавила backgroundImageView в иерархию, но не задала размеры. Поэтому у нее сейчас положение 0 и 0 и размер такой, что перекрывает твой экран. Повезло)
+
+ - ofLoginLabel шрифт - if let descriptor = UIFontDescriptor(name: "Avenir-Next", size: 31).withSymbolicTraits(.traitBold) {
+ ofLoginLabel.font = UIFont(descriptor: descriptor, size: 31)}
+
+ - у lineViewLeft убери lineViewLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor) и будет длина. Слишком много констрейнтов.
+
+ - расширение будет выглядеть так - extension UITextField {
+ func setAttributedText(string: String, color: UIColor) {
+ let attributedString = NSAttributedString(string: string, attributes: [.foregroundColor: color])
+ self.attributedText = attributedString
+ }
+ } и потом вызываешь signUpTextView.setAttributedText(string: "Sign up", color: UIColor.green)
+ В твоем случае ты создаешь attributedString, но нигде не применяешь, поэтому оно и не отрабатывает.
+ - Непонятно почему название signUpTextView если это UITextField
+ - Размеры лучше шириной не указывать, а если указываешь, то ее нужно вычислять из общей ширины экрана. Так как она изменяется в зависимости от устройства.
+
+ И еще несколько рекомендаций)
+ - cледи за желтыми необработанными ошибками, их не должно быть
+ - следи за код стайлом - https://google.github.io/swift/
+ - много лишних междустрочных интервалов
+ - не забывай выравнивать код control+i
+ */
 
 import UIKit
 
@@ -14,9 +44,7 @@ class ViewController: UIViewController {
     private lazy var background: UIImageView = {
         let background = UIImageView()
         background.image = UIImage(named: "background")
-        
-        // так верно? я про расположение на экране
-        
+        background.frame.size = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         background.contentMode = .scaleAspectFit
         background.translatesAutoresizingMaskIntoConstraints = false
         return background
@@ -27,11 +55,12 @@ class ViewController: UIViewController {
         ofLoginLabel.text = "Login"
         ofLoginLabel.textAlignment = .center
         ofLoginLabel.textColor = UIColor.systemIndigo
-        ofLoginLabel.font = UIFont(name: "Avenir-Next", size: 31)
+        //ofLoginLabel.font = UIFont(name: "Avenir-Next", size: 31)
         
-        //а как избежать повторения 31 и 31?
+        if let descriptor = UIFontDescriptor(name: "Avenir-Next", size: 31).withSymbolicTraits(.traitBold) {
+        ofLoginLabel.font = UIFont(descriptor: descriptor, size: 31)}
         
-        ofLoginLabel.font = UIFont.systemFont(ofSize: 31, weight: .bold)
+        //ofLoginLabel.font = UIFont.systemFont(ofSize: 31, weight: .bold)
         ofLoginLabel.numberOfLines = 1
         ofLoginLabel.translatesAutoresizingMaskIntoConstraints = false
         return ofLoginLabel
@@ -86,14 +115,12 @@ class ViewController: UIViewController {
     private lazy var remindTextField: UITextField = {
         let remindTextField = UITextField()
         remindTextField.text = "Forgot your password?"
-        remindTextField.textColor = UIColor.systemBlue
+        remindTextField.textColor = UIColor.green
         remindTextField.font = UIFont(name: "Avenir-Next", size: 10)
         remindTextField.font = UIFont.systemFont(ofSize: 10, weight: .light)
         remindTextField.translatesAutoresizingMaskIntoConstraints = false
         return remindTextField
     }()
-    
-    // тут две линии и у них выставлена длина в констрейнерах но - они на весь экран почему-то
     
     private lazy var lineViewLeft: UIView = {
         let lineViewLeft = UIView()
@@ -179,9 +206,9 @@ class ViewController: UIViewController {
         signUpTextView.font = UIFont(name: "Avenir-Next", size: 14)
         signUpTextView.font = UIFont.systemFont(ofSize: 10, weight: .light)
         
-        // не срабатывает расширение - в чем тут мой косяк?
+        signUpTextView.setAttributedText(string: "Sign up", color: UIColor.green)
         
-        signUpTextView.attributedText(string: signUpTextView.text ?? "" )
+       // signUpTextView.attributedText(string: signUpTextView.text ?? "" )
         signUpTextView.translatesAutoresizingMaskIntoConstraints = false
         return signUpTextView
     }()
@@ -220,6 +247,11 @@ class ViewController: UIViewController {
     private func setupLayout() {
         NSLayoutConstraint.activate([
             
+            background.topAnchor.constraint(equalTo: view.topAnchor),
+            background.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            background.leftAnchor.constraint(equalTo: view.leftAnchor),
+            background.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
             ofLoginLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             ofLoginLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250),
             
@@ -250,18 +282,13 @@ class ViewController: UIViewController {
             connectTextField.widthAnchor.constraint(equalToConstant: 100),
             
             lineViewLeft.topAnchor.constraint(equalTo: remindTextField.bottomAnchor, constant: 160),
-            lineViewLeft.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lineViewLeft.heightAnchor.constraint(equalToConstant: 1),
-            
-            // длина почему-то не регулируется и идет на полный экран. widthAnchor это де длина?
-            
-            lineViewLeft.widthAnchor.constraint(equalToConstant: 50),
+            lineViewLeft.widthAnchor.constraint(equalToConstant: 120),
             lineViewLeft.leftAnchor.constraint(equalTo: view.leftAnchor, constant:  20),
             
             lineViewRight.topAnchor.constraint(equalTo: remindTextField.bottomAnchor, constant: 160),
-            lineViewRight.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             lineViewRight.heightAnchor.constraint(equalToConstant: 1),
-            lineViewRight.widthAnchor.constraint(equalToConstant: 50),
+            lineViewRight.widthAnchor.constraint(equalToConstant: 120),
             lineViewRight.rightAnchor.constraint(equalTo: view.rightAnchor, constant:  -20),
             
             faceBookButton.topAnchor.constraint(equalTo: connectTextField.bottomAnchor, constant: 30),
